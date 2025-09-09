@@ -15,7 +15,7 @@ COPY src ./src
 # Construcción del JAR
 RUN ./mvnw clean package -DskipTests
 
-# Usar el puerto dinámico que asigna Koyeb
+
 EXPOSE 8000
 
 # Ejecutar con el puerto que Koyeb pase en la variable de entorno PORT
