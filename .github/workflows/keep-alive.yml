@@ -1,0 +1,13 @@
+name: ping en koyeb
+
+on:
+  schedule:
+    - cron: "*/10 * * * *"
+  workflow_dispatch:
+
+jobs:
+  ping:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Ping Koyeb app
+        run: curl -s https://dramatic-cherianne-darwin123h-5b1c4134.koyeb.app > /dev/null
